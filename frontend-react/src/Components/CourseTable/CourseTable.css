@@ -1,0 +1,49 @@
+.coursetable-container {
+  box-sizing: border-box;
+  margin: 3rem;
+  border: 2px solid #000000;
+  box-shadow: 0px 4px 59px 8px rgba(0, 0, 0, 0.25);
+}
+.coursetable-header{
+  margin:1rem 2rem -1rem 2rem;
+}
+.course-table {
+  margin:2rem;
+}
+.tss-178gktx-MUIDataTableHeadCell-contentWrapper {
+  justify-content: center !important;
+}
+.css-levciy-MuiTablePagination-displayedRows {
+  margin-top: 1rem !important;
+  font-family: "Roboto";
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+.tss-1akey0g-MUIDataTableHeadCell-data {
+  display: inline-block;
+  font-weight: bold !important;
+}
+.tss-1qtl85h-MUIDataTableBodyCell-root {
+  font-family: "Roboto";
+}
+.coursetable-button {
+  margin: 1rem 0 2rem 50vw;
+  text-align: center;
+  display:flex;
+  gap:1rem;
+}
+.ctable-btn{
+  cursor: pointer;
+  font-family: DM Sans;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background: #6c63ff;
+  border-radius: 5rem;
+  overflow: hidden;
+}
+.ctable-btn:hover{
+  background: #4e44fc;
+}

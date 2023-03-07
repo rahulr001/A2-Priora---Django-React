@@ -1,0 +1,65 @@
+.adminnav-container {
+    position: sticky;
+    background: #d9d9d9;
+    gap: 20vw;
+    display: flex;
+    max-height: 5vw;
+    min-height: 50px;
+    align-items: center;
+}
+
+.adminlogo {
+    display: flex;
+    width: 34vw;
+    margin: 0vw 0vw 0vw 1vw;
+    align-items: baseline;
+}
+
+.adminlogo img {
+    width: 4vw;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.adminlogo h1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.8vw;
+    letter-spacing: 0.1em;
+    color: #5d5a88;
+    cursor: pointer;
+}
+
+.adminnav-links {
+    margin-top: 1vw;
+}
+
+.adminnav-links ul {
+    display: flex;
+    gap: 2vw;
+}
+
+.adminnav-links ul li {
+    padding: 0 1vw;
+    border-width: 0vw 1px 1px 0px;
+
+    border-style: solid;
+    border-color: #000000;
+    filter: blur(0.5px);
+    border-radius: 100px;
+}
+
+
+.adminlinks {
+    font-family: DM Sans;
+    font-size: 1.1vw;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+
+}
+
+.adminnav-links ul li:hover {
+    background: #ffffff;
+}

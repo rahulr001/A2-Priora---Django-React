@@ -1,0 +1,28 @@
+.table-container {
+    margin: 6vw 1vw 0 10vw;
+        border: 2px solid #000000;
+            box-shadow: 0px 4px 59px 8px rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+} 
+
+.table {
+    margin: 2rem;
+}
+ .tss-1akey0g-MUIDataTableHeadCell-data{
+    font-weight: bold!important;
+ }
+
+.tss-178gktx-MUIDataTableHeadCell-contentWrapper{
+    justify-content: center!important;
+    font-size: 1.5vw;
+           
+}
+.css-levciy-MuiTablePagination-displayedRows {
+    margin-top: 1rem !important;
+    font-family: 'Roboto';
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+}
+.css-2ulfj5-MuiTypography-root{
+    font-weight: 900!important;
+}

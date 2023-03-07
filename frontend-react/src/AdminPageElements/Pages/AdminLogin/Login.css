@@ -1,0 +1,87 @@
+.bgimg {
+    width: 96vw;
+    height: 53vw;
+    margin: -1vw;
+    position: absolute;
+    z-index: -1;
+}
+
+.loginContainer {
+    display: flex;
+    gap: 21vw;
+}
+
+.title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.4vw;
+    align-items: flex-end;
+    letter-spacing: 0.1em;
+    color: #5D5A88;
+}
+
+.-logo {
+    width: 7vw;
+    height: 4.3vw;
+}
+
+.titleContainer {
+    display: flex;
+    padding: 2vw 2vw;
+    gap: 1.5vw;
+    
+}
+
+.bannerimg {
+    width: 40vw;
+    height: 40vw;
+}
+
+.avatar {
+    width: 21vw;
+    height: 12vw;
+    margin-top: 6vw;
+}
+
+.textBoxContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome {
+    position: absolute;
+    top: 20vw;
+    left: 64vw;
+    text-shadow: 0px 0px 10px #000000ab;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.5vw;
+    letter-spacing: 0.15em;
+    color: #0D76C2;
+}
+
+.inputfields {
+    margin: 7vw 0 0 0vw;
+    display: flex;
+    gap: 4vw;
+    flex-direction: column;
+}
+
+.loginButton {
+    margin-left: 5.5vw;
+}
+
+.forgetpass {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-pass {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    margin-top: 2vw;
+}

@@ -1,0 +1,33 @@
+.table-btn-links {
+    margin: 1vw 0 0 1vw;
+    display: block;
+    float: left;
+    z-index: 2;
+    position: fixed;
+}
+
+.table-btn-links ul {
+    display: flex;
+    gap: 2vw;
+}
+
+.table-btn-links ul li {
+    padding: 0 1vw;
+    border-width: 0vw 1px 1px 0px;
+    border-style: solid;
+    border-color: #000000;
+    filter: blur(0.5px);
+    border-radius: 100px;
+}
+
+.link {
+    font-family: DM Sans;
+    font-size: 1.2vw;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+}
+
+.table-btn-links ul li:hover {
+    background: #DBDBDB;
+}

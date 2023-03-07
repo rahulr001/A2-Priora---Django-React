@@ -1,0 +1,31 @@
+ul {
+    display: flex;
+    gap: 2vw;
+}
+
+ul li {
+    padding: 0 1vw;
+    border-width: 0vw 1px 1px 0px;
+    border-style: solid;
+    border-color: #000000;
+    filter: blur(0.5px);
+    border-radius: 100px;
+}
+ul li:hover {
+    background: #DBDBDB;
+}
+.link {
+    font-family: DM Sans;
+    font-size: 1.2vw;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+}
+.MuiDataGrid-columnHeaderTitleContainer{
+    justify-content: space-around!important;
+}
+.MuiDataGrid-row {
+    
+    justify-content: space-evenly!important;
+    flex-wrap: wrap!important;
+}

@@ -1,0 +1,49 @@
+.home-container{
+    margin:2rem 0 0 2rem;
+    height:75vh;
+}
+.left-img{
+    position:absolute;
+    width:40vw;
+    left:5rem;
+}
+.right-img{
+    /* margin:2rem 0 0 3rem; */
+    position:absolute;
+    left:15rem;
+    width:75vw;
+    z-index:-10;
+    /* height:35rem; */
+}
+.home-text{
+    position:absolute;
+    top:11.5rem;
+    left:8rem;
+    padding:1rem;
+    width:35vw;
+    font-family:DM Mono;
+    font-size:0.5rem;
+}
+
+.home-button{
+    position:absolute;
+    top:21.5rem;
+    left:10rem;
+    border-radius:5rem;
+    overflow:hidden;
+}
+.home-btn{
+    cursor: pointer;
+    font-family:DM Sans;
+    font-size:1rem;
+    font-weight:bold;
+    color:white;
+    padding:0.5rem 2rem;
+    border:none;
+    background: #6C63FF;
+    border-radius:5rem;
+    overflow:hidden;
+}
+.home-btn:hover{
+    background: #4e44fc;
+}
