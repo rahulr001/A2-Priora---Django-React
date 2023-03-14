@@ -1,37 +1,46 @@
 import React, { useState } from "react";
-import "./CashNet.css";
+import "./Paynow.css";
 import Navbar from "../Navbar/Navbar.tsx";
 import Footer from "../Footer/Footer.tsx";
 import Ripples from "react-ripples";
 import { Link } from "react-router-dom";
 import CashPopup from "./CashPopup/CashPopup.tsx";
 
-function CashNet() {
+const Paynow = () => {
   const [popup, setPopup] = useState(false);
+  const paynownum = "2020XXXXXR";
   return (
     <>
       <Navbar />
-      <div className="cash-container">
-        <div className="cash-content">
-          <h1>Payment Type:Cash/Nets</h1>
+      <div className="paynow-container">
+        <div className="paynow-content">
+          <h1>Payment Type: PayNow</h1>
           <h1>Grand Total: </h1>
         </div>
-        <div className="cash-container1">
-          <div className="cash-content1">
-            <h2>
-              You can make payment directly on the course date, to reception
-              table before enter into the class.
-            </h2>
-            <h4 style={{ color: "red" }}>
-              Note: If you reserve seat by cash payment method, your seat is
-              reserved. But if you not able to attend the course, must need to
-              inform us before one day. If you register and not attend the class
-              and didn’t notify to us, we will ban your NRIC for next 1 Year.
+        <div className="paynow-container1">
+          <div className="paynow-content1">
+            <h2>Kindly Transfer to this Paynow Account:</h2>
+            <h4>Paynow To UEN :{paynownum}</h4>
+            <div className="qr">
+              <h1>Or</h1>
+              <h3>QR</h3>
+            </div>
+            <h4>Scan this QR code to make payment by using your bank app.</h4>
+            <h4 style={{color:'red'}}>
+              (NOTE: Before payment Check our name A2 PRIORA PROFESSIONAL
+              INSTITUTE PTE LTD appears in payment page)
             </h4>
+          </div>
+          <div className="paynow-content2">
+            <p>
+              Once payment was done, Kindly take a screenshort or Snapshort of
+              Recipt. And Upload it here.(Receipt in the form of JPG(Image) or
+              PDF Format.)
+            </p>
           </div>
         </div>
 
-        <div className="cash-buttons">
+        <div className="paynow-buttons">
           <div
             style={{
               display: "inline-flex",
@@ -41,7 +50,7 @@ function CashNet() {
           >
             <Ripples>
               <Link to="/payments" className="link-tab">
-                <button type="submit" className="cash-btn">
+                <button type="submit" className="paynow-btn">
                   Back
                 </button>
               </Link>
@@ -56,7 +65,7 @@ function CashNet() {
           >
             <Ripples>
               <Link to="/coursetable" className="link-tab">
-                <button type="submit" className="cash-btn">
+                <button type="submit" className="paynow-btn">
                   Cancel
                 </button>
               </Link>
@@ -71,8 +80,12 @@ function CashNet() {
           >
             <Ripples>
               <Link to="" className="link-tab">
-                <button type="submit" className="cash-btn">
-                  Done
+                <button
+                  type="submit"
+                  className="paynow-btn"
+                  onClick={() => setPopup(true)}
+                >
+                  Upload
                 </button>
               </Link>
             </Ripples>
@@ -83,13 +96,11 @@ function CashNet() {
         className="popup"
         style={{ display: popup === true ? "block" : "none" }}
       >
-        {/* <CashPopup setPopup={setPopup}/> */}
+        <CashPopup setPopup={setPopup} />
       </div>
-      <div className="footer">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
-}
+};
 
-export default CashNet;
+export default Paynow;

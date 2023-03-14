@@ -9,6 +9,8 @@ import Footer from "../Footer/Footer.tsx";
 import Searchs from "../../Assets/search.svg";
 import Datetab from "../../Assets/date.svg";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { coursedata } from "../../Redux/CourseSlice";
 import moment from "moment";
 
 const Course = () => {
@@ -95,6 +97,7 @@ const Course = () => {
     },
   ];
   const [datas, setDatas] = useState(data);
+
   const handleSearch = () => {
     if (search === "") {
       setDatas(data);
@@ -106,6 +109,15 @@ const Course = () => {
     }
   };
   const { Search } = Input;
+
+const dispatch = useDispatch();
+const handleRegister =(coursenames)=>{
+   dispatch(
+    coursedata({
+      coursename:coursenames
+    })
+   )
+}
 
   return (
     <>
@@ -166,8 +178,8 @@ const Course = () => {
                 }}
               >
                 <Ripples>
-                  <Link className="link-tab" to={`/sform/${course.coursename}`}>
-                    <button type="button" className="course-btn">
+                  <Link className="link-tab" to={`/sform`}>
+                    <button type="button" className="course-btn" onClick={()=>handleRegister(course.coursename)}>
                       Register
                     </button>
                   </Link>
@@ -177,7 +189,7 @@ const Course = () => {
           ))}
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </>
   );
 };

@@ -51,8 +51,8 @@ const Sform = () => {
       })
     );
   };
-  const user = useSelector((state) => state.user.value);
-  
+const user = useSelector((state) => state.user.value);
+const course = useSelector((state)=>state.course.value)
 const navigate=useNavigate()
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -61,7 +61,7 @@ const navigate=useNavigate()
    
     console.log("I am Working");
     Dispatches()
-    console.log(user);
+    console.log(course);
     setValues({
       sponsership_type: "",
       selected_course: "",
@@ -79,7 +79,7 @@ const navigate=useNavigate()
     });
     navigate("/coursetable");
   };
-  return { handleChange, values, handleSubmit };
+  return { handleChange, values, handleSubmit,course };
 };
 
 export default Sform;

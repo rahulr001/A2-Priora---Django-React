@@ -10,10 +10,9 @@ import { useSelector } from "react-redux";
 
 const SponserForm = () => {
   const { TextArea } = Input;
-  const { course } = useParams();
-  const { values, handleChange, handleSubmit } = Sform();
-  const user = useSelector((state) => state.user.value);
-  console.log(user);
+  // const { course } = useParams();
+ 
+  const { values, handleChange, handleSubmit,course } = Sform();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -22,7 +21,7 @@ const SponserForm = () => {
       <Navbar />
       <div className="sform-container">
         <div className="sform-header">
-          <h1>{course}</h1>
+          <h1>{course.coursename}</h1>
         </div>
         <div className="sform-content">
           <Form autoComplete="off">

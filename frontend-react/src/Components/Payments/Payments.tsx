@@ -1,10 +1,10 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Navbar from "../Navbar/Navbar.tsx";
 import Footer from "../Footer/Footer.tsx";
 import MUIDataTable from "mui-datatables";
 import { Radio, Form } from "antd";
 import Ripples from "react-ripples";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { FaTrash } from "react-icons/fa";
 import Paypal from "./Paypal/Paypal.tsx";
@@ -12,11 +12,26 @@ import "./Payments.css";
 import { display } from "@mui/system";
 
 const Payments = () => {
+  const navigate = useNavigate()
   const [ptype, setPtype] = React.useState("");
   const [paypal, setPaypal] = React.useState(false);
+  const [banktransfer, setBankTransfer] = React.useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const handlePayment = () => {
     if (ptype === "paypal") {
       return setPaypal(true);
+    }
+    else if(ptype === 'banktransfer'){
+       return window.location.href='/banktransfer';
+       //  navigate('/cashnet')
+      } 
+    else if(ptype === 'paynow'){
+      return window.location.href='/paynow';
+    }
+    else if(ptype === 'cash'){
+      return window.location.href='/cashnet';
     }
   };
   const getMuiTheme = () =>
@@ -68,9 +83,9 @@ const Payments = () => {
   ];
 
   const options = {
-    responsive: true,
+    responsive:'standard',
     filterType: "dropdown",
-    selectableRows: false,
+    selectableRows:'none',
     download: false,
     print: false,
     filter: false,
@@ -120,7 +135,7 @@ const Payments = () => {
                   PayNow
                 </Radio.Button>
                 <Radio.Button
-                  value="bank_transfer"
+                  value="banktransfer"
                   style={{ fontWeight: "bold" }}
                 >
                   Bank Transfer

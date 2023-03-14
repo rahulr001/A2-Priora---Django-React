@@ -1,34 +1,38 @@
 .home-container{
     margin:2rem 0 0 2rem;
-    height:75vh;
+    /* height:75vh; */
+}
+.bg-img{
+    display:flex;   
 }
 .left-img{
     position:absolute;
     width:40vw;
-    left:5rem;
+    left:8vw;
 }
 .right-img{
     /* margin:2rem 0 0 3rem; */
     position:absolute;
     left:15rem;
-    width:75vw;
+    min-width:75vw;
+    max-width:75vw;
     z-index:-10;
     /* height:35rem; */
 }
 .home-text{
     position:absolute;
-    top:11.5rem;
-    left:8rem;
+    top:28vh;
+    left:10vw;
     padding:1rem;
-    width:35vw;
+    min-width:35vw;
+    max-width:35vw;
     font-family:DM Mono;
     font-size:0.5rem;
 }
-
 .home-button{
     position:absolute;
-    top:21.5rem;
-    left:10rem;
+    top:52vh;
+    left:15vw;
     border-radius:5rem;
     overflow:hidden;
 }
@@ -46,4 +50,10 @@
 }
 .home-btn:hover{
     background: #4e44fc;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px; 
 }

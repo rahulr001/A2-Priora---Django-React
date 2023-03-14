@@ -9,6 +9,7 @@ import { FaTrash } from "react-icons/fa";
 import "./CourseTable.css";
 
 const CourseTable = () => {
+
   const getMuiTheme = () =>
     createTheme({
       components: {
@@ -47,6 +48,9 @@ const CourseTable = () => {
         },
       },
     });
+    React.useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   const columns = [
     "S.No",
     "Name",
@@ -87,9 +91,9 @@ const CourseTable = () => {
   ];
 
   const options = {
-    responsive: true,
+    responsive:'standard',
     filterType: "dropdown",
-    selectableRows: false,
+    selectableRows:'none',
     download: false,
     print: false,
     viewColumns: false,
@@ -98,12 +102,12 @@ const CourseTable = () => {
     jumpToPage: false,
     rowsPerPageOptions: false,
     pagination: true,
-    onChangePage(currentPage) {
-      console.log({ currentPage });
-    },
-    onChangeRowsPerPage(numberOfRows) {
-      console.log({ numberOfRows });
-    },
+    // onChangePage(currentPage) {
+    //   console.log({ currentPage });
+    // },
+    // onChangeRowsPerPage(numberOfRows) {
+    //   console.log({ numberOfRows });
+    // },
   };
 
   return (
@@ -127,7 +131,7 @@ const CourseTable = () => {
             }}
           >
             <Ripples>
-              <Link to="/sform/:course" className="link-tab">
+              <Link to="/sform" className="link-tab">
                 <button type="button" className="ctable-btn">
                   Cancel
                 </button>

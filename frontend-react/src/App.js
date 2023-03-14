@@ -6,7 +6,8 @@ import Course from "./Components/Course/Course.tsx";
 import CourseTable from "./Components/CourseTable/CourseTable.tsx";
 import Login from "./AdminPageElements/Pages/AdminLogin/Login.tsx";
 import SponserForm from "./Components/SponserForm/SponserForm.tsx";
-import CashNet from "./Components/CashNet/CashNet.tsx"
+import CashNet from "./Components/CashNet/CashNet.tsx";
+import BankTransfer from "./Components/BankTransfer/BankTransfer.tsx";
 import Payments from "./Components/Payments/Payments.tsx";
 import AdminHome from "./AdminPageElements/Pages/AdminHome/AdminHome.tsx";
 import AdminPayment from "./AdminPageElements/Pages/AdminPayment/AdminPayment.tsx";
@@ -15,7 +16,7 @@ import AdminAddCourses from "./AdminPageElements/Pages/AdminAddCourses/AdminAddC
 import AdminPaymentGoto from "./AdminPageElements/Pages/AdminPayment/AdminPaymentGoto.tsx";
 import AdminCertificates from "./AdminPageElements/Pages/AdminCertificates/AdminCertificates.tsx";
 import AdminParticipationDetails from "./AdminPageElements/Pages/AdminParticipationDetails/AdminParticipationDetails.tsx";
- 
+import Paynow from "./Components/Paynow/Paynow.tsx";
 
 function App() {
   return (
@@ -29,15 +30,19 @@ function App() {
         <Route path="/adminPaymentGoto" element={<AdminPaymentGoto />} />
         <Route path="/adminAddCourse" element={<AdminAddCourses />} />
         <Route path="/adminCertificate" element={<AdminCertificates />} />
-        <Route path="/adminParticipationDetails" element={<AdminParticipationDetails />} />
+        <Route
+          path="/adminParticipationDetails"
+          element={<AdminParticipationDetails />}
+        />
         {/* <Route path="/about" element={<About/>}/> */}
         {/* <Route path="/careers" element={<Careers/>}/> */}
         <Route path="/cashnet" element={<CashNet />} />
         <Route path="/course" element={<Course />} />
-
-        <Route path="/sform/:course" element={<SponserForm />} />
+        <Route path="/sform" element={<SponserForm />} />
         <Route path="/coursetable" element={<CourseTable />} />
         <Route path="/payments" element={<Payments />} />
+        <Route path="/paynow" element={<Paynow />} />
+        <Route path="/banktransfer" element={<BankTransfer/>} />
       </Routes>
     </div>
   );

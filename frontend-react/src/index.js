@@ -6,11 +6,13 @@ import { BrowserRouter } from "react-router-dom";
 import {configureStore} from '@reduxjs/toolkit';
 import {Provider} from'react-redux';
 import UserReducer from './Redux/UserSlice';
+import CourseReducer from './Redux/CourseSlice';
 
 
 const store = configureStore({
   reducer:{
-    user:UserReducer
+    user:UserReducer,
+    course:CourseReducer
   }
 });
 

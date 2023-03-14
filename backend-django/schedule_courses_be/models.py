@@ -18,7 +18,7 @@ visibility = (
 
 class ScheduleCourse(models.Model):
     select_course = models.ForeignKey(
-        Course, models.PROTECT, db_column='select_course', blank=False, null=False)
+    Course, models.PROTECT, db_column='select_course', blank=False, null=False)
     run = models.IntegerField(db_column='run', blank=False, null=False)
     PDU = models.IntegerField(db_column='PDU', blank=False, null=False)
     CET = models.IntegerField(db_column='CET', blank=False, null=False)

@@ -45,6 +45,8 @@ class CourseRegister(models.Model):
         db_column='membership_no',   blank=False, null=False)
     payment = models.ForeignKey(
         Payment, models.PROTECT, db_column='payment', blank=False, null=False)
+    payment_successfull_screenshot = models.ImageField(
+        upload_to='payment successfull screenshots/', blank=True)
 
     class Meta:
         db_table = 'course_register'

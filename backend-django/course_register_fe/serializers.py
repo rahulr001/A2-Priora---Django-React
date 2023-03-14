@@ -7,7 +7,7 @@ class CourseRegisterSerializer(serializers.ModelSerializer):
         fields = [
                     'register_id', 'selected_course', 'sponsorship_type', 'applicant_name',
                     'contact_no','email', 'alternative_email', 'address','postal_code',
-                    'company_name', 'membership_type', 'membership_no', 'payment', 'FIN_NRIC_Passport_no'
+                    'company_name', 'membership_type', 'membership_no', 'payment', 'FIN_NRIC_Passport_no', 'payment_successfull_screenshot'
                 ]
 
  
